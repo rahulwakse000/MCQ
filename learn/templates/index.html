@@ -4,11 +4,11 @@
 
 
 {% for question in questions %}
+
 <div class="container mt-5">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-10">
             <div class="border">
-              
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
                         <h3 class="text-danger">Q.</h3>
@@ -16,7 +16,8 @@
                     </div>
                     <hr>
                     <div class="ans ml-2">
-                        <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span>{{question.ans1}}</span>
+                        <label class="radio"> <input type="radio" name="brazil" value="brazil">
+                            <span>{{question.ans1}}</span>
                         </label>
                     </div>
                     <div class="ans ml-2">
@@ -30,19 +31,22 @@
                         </label>
                     </div>
                     <div class="ans ml-2">
-                        <label class="radio"> <input type="radio" name="Russia" value="Russia"> <span>{{question.ans4}}</span>
+                        <label class="radio"> <input type="radio" name="Russia" value="Russia">
+                            <span>{{question.ans4}}</span>
                         </label>
                     </div>
                 </div>
-                {% comment %} <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
-                        class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                <!-- <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <button class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
                             class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button><button
                         class="btn btn-primary border-success align-items-center btn-success" type="button">Next<i
-                            class="fa fa-angle-right ml-2"></i></button></div> {% endcomment %}
+                            class="fa fa-angle-right ml-2"></i></button>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
+
 {% endfor %}
 
 
