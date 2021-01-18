@@ -7,5 +7,6 @@ from .views import index
 
 
 urlpatterns = [
-    path('', index, name='homepage')
+    path('', index, name='homepage'),
+    # path('base',base ,name='base1')
 ]
