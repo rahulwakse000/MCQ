@@ -6,7 +6,7 @@ from .models.question_ans import Question
 from .models.levels import Level
 
 
-# from .models import question
+
 
 
 # Create your views here.
@@ -16,6 +16,8 @@ class QusAns1(View):
         questions = Question.get_all_questions()
         levels = Level.get_all_level()
         set1 = questions[0:5]
+
+        
         
         data = {}
         data['questions'] = set1

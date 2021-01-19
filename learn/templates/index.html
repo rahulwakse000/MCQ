@@ -5,7 +5,7 @@
 
 {% for question in questions %}
 <form action="">
-<div class="container mt-5">
+<div class="container mt-2">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-10">
             <div class="border">
@@ -35,11 +35,7 @@
                             <span>{{question.ans4}}</span>
                         </label>
                     </div>
-                    <!-- <div class="ans ml-2" style="display: none; color: green;">
-                        
-                            <span><b>{{question.ans4}}</b></span>
-                        
-                    </div> -->
+                   
                 </div>
 
             </div>
@@ -50,7 +46,7 @@
 {% endfor %}
 
 
-<form action="/2">
+<form action="/2" method="GET">
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
         <button class="btn btn-primary border-success align-items-center btn-success" type="submit">Next<i
