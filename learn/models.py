@@ -1,3 +1,4 @@
+
 from django.db import models
 
 # Create your models here.
@@ -14,5 +15,10 @@ class Question(models.Model):
     @staticmethod
     def get_all_questions():
         return Question.objects.all()
+
+    
+    @staticmethod
+    def get_all_que(ans_1):
+        return Question.objects.filter(ans1=ans_1)
 
     
