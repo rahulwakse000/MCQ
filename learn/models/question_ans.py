@@ -1,5 +1,7 @@
 
 from django.db import models
+from .levels import Level
+from .levels import Level
 
 # Create your models here.
 
@@ -10,6 +12,8 @@ class Question(models.Model):
     ans3 = models.CharField(max_length=100)
     ans4 = models.CharField(max_length=100)
     correct_answer = models.CharField(max_length=100, default='')
+    levels = models.ForeignKey(Level,on_delete=models.CASCADE,default=1)
+
 
 
     @staticmethod
@@ -18,7 +22,11 @@ class Question(models.Model):
 
     
     @staticmethod
-    def get_all_que(ans_1):
-        return Question.objects.filter(ans1=ans_1)
+    def get_all_q_a(levels_id):
+        if levels_id:
+            return Question.objects.filter(levels = levels_id)
+        else:
+            return Question.objects.all()
 
-    
+
+

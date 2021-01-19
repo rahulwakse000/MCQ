@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Question
 from django.views import View
+from .models.levels import Level
+from .models.question_ans import Question
+from .models.levels import Level
 
 
 # from .models import question
@@ -10,15 +12,22 @@ from django.views import View
 # Create your views here.
 class QusAns1(View):
     def get(self,request):
-        # que1 = Question.get_all_que()
+        
         questions = Question.get_all_questions()
+        levels = Level.get_all_level()
         set1 = questions[0:5]
         
-        categoryID = request.GET.get('question'[1])
-        
-        print(set1[0:5])
+        data = {}
+        data['questions'] = set1
+        data['levels'] = levels
+       
 
-        return render(request, 'index.html', {'questions': set1})
+        return render(request, 'index.html',data)
+
+
+
+
+
 
 
 class QusAns2(View):
