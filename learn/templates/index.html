@@ -3,7 +3,7 @@
 {% block content %}
 
 
-{% for question in questions %}
+
 <form action="">
 <div class="container mt-2">
     <div class="d-flex justify-content-center row">
@@ -12,27 +12,27 @@
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
                         <h3 class="text-danger">Q.</h3>
-                        <h5 class="mt-1 ml-2">{{question.que}}</h5>
+                        <h5 class="mt-1 ml-2">{{set1.que}}</h5>
                     </div>
                     <hr>
                     <div class="ans ml-2">
                         <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans1}}">
-                            <span>{{question.ans1}}</span>
+                            <span>{{set1.ans1}}</span>
                         </label>
                     </div>
                     <div class="ans ml-2">
                         <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans2}}">
-                            <span>{{question.ans2}}</span>
+                            <span>{{set1.ans2}}</span>
                         </label>
                     </div>
                     <div class="ans ml-2">
                         <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans3}}">
-                            <span>{{question.ans3}}</span>
+                            <span>{{set1.ans3}}</span>
                         </label>
                     </div>
                     <div class="ans ml-2">
                         <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans4}}">
-                            <span>{{question.ans4}}</span>
+                            <span>{{set1.ans4}}</span>
                         </label>
                     </div>
                    
@@ -42,11 +42,159 @@
         </div>
     </div>
 </div>
-</form>
-{% endfor %}
 
+<div class="container mt-2">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{set2.que}}</h5>
+                    </div>
+                    <hr>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans1}}">
+                            <span>{{set2.ans1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans2}}">
+                            <span>{{set2.ans2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans3}}">
+                            <span>{{set2.ans3}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans4}}">
+                            <span>{{set2.ans4}}</span>
+                        </label>
+                    </div>
+                   
+                </div>
 
-<form action="/2" method="GET">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{set3.que}}</h5>
+                    </div>
+                    <hr>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans1}}">
+                            <span>{{set3.ans1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans2}}">
+                            <span>{{set3.ans2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans3}}">
+                            <span>{{set3.ans3}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans4}}">
+                            <span>{{set3.ans4}}</span>
+                        </label>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{set4.que}}</h5>
+                    </div>
+                    <hr>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans1}}">
+                            <span>{{set4.ans1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans2}}">
+                            <span>{{set4.ans2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans3}}">
+                            <span>{{set4.ans3}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans4}}">
+                            <span>{{set4.ans4}}</span>
+                        </label>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{set5.que}}</h5>
+                    </div>
+                    <hr>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans1}}">
+                            <span>{{set5.ans1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans2}}">
+                            <span>{{set5.ans2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans3}}">
+                            <span>{{set5.ans3}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="{{question.id}}" value="{{question.ans4}}">
+                            <span>{{set5.ans4}}</span>
+                        </label>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
         <button class="btn btn-primary border-success align-items-center btn-success" type="submit">Next<i
@@ -54,6 +202,8 @@
         </button>
     </div>
 </div>
+
 </form>
+
 
 {% endblock%}

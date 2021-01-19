@@ -15,16 +15,18 @@ class QusAns1(View):
         
         questions = Question.get_all_questions()
         levels = Level.get_all_level()
-        set1 = questions[0:5]
+        set1 = questions[0]
+        set2 = questions[1]
+        set3 = questions[2]
+        set4 = questions[3]
+        set5 = questions[4]
 
         
         
-        data = {}
-        data['questions'] = set1
-        data['levels'] = levels
+        
        
 
-        return render(request, 'index.html',data)
+        return render(request, 'index.html',{'set1':set1,'set2':set2,'set3':set3,'set4':set4,'set5':set5})
 
 
 
