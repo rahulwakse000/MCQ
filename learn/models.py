@@ -14,3 +14,5 @@ class Question(models.Model):
     @staticmethod
     def get_all_questions():
         return Question.objects.all()
+
+    
