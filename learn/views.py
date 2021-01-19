@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .models import Question
 
 
-
 # from .models import question
 
 
@@ -12,15 +11,26 @@ from .models import Question
 def index(request):
     questions = Question.get_all_questions()
     set1 = questions[0:5]
-    
-    return render(request, 'index.html',{'questions':set1})
 
-
-
+    return render(request, 'index.html', {'questions': set1})
 
 
 def index2(request):
     questions = Question.get_all_questions()
     set2 = questions[5:10]
-    
-    return render(request, 'index2.html',{'questions':set2})
+
+    return render(request, 'index2.html', {'questions': set2})
+
+
+def index3(request):
+    questions = Question.get_all_questions()
+    set3 = questions[10:15]
+
+    return render(request, 'index3.html', {'questions': set3})
+
+
+def index4(request):
+    questions = Question.get_all_questions()
+    set4 = questions[15:20]
+
+    return render(request, 'index4.html', {'questions': set4})
