@@ -1,15 +1,16 @@
+from django import views
 from django.db.models.query_utils import PathInfo
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
-from .models import Questions, Answers_alll
-
+from .models import Questions
+from django.views import View
 # Create your views here.
 
 
 def index(request):
 
     questions = Questions.get_all_questions()
-    answer = Answers_alll.get_qus_ans()
+    
 
     que0 = questions[0]
     que1 = questions[1]
@@ -18,22 +19,33 @@ def index(request):
 
     questions_list = [que0.answer, que1.answer, que2.answer, que3.answer]
 
-    for i in questions_list:
-        print(i)
+    postData = request.POST
+    opt1 = postData.get('quesiton1')
+    opt2 = postData.get('quesiton2')
+    opt3 = postData.get('quesiton3')
+    opt4 = postData.get('quesiton4')
 
-    # print(questions)
     print(request.method)
     mark = []
     if request.method == 'POST':
-        postData = request.POST
-        opt = postData.get('quesiton')
 
-        if questions_list[0] == opt:
+        if questions_list[0] == opt1:
             mark.append(5)
-            print(mark)
-        print(opt)
+        if questions_list[1] == opt2:
+            mark.append(5)
+        if questions_list[2] == opt3:
+            mark.append(5)
+        if questions_list[3] == opt4:
+            mark.append(5)
 
+            print(sum(mark))
         return redirect('homepage')
 
     else:
         return render(request, 'index.html', {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3})
+
+
+class Question_Answers(View):
+    def get(self,**args):
+        pass
+
