@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+                    <!-- question 1 -->
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.</h3>
+                            <h5 class="mt-1 ml-2">{{qus_ans0.quesiton}}</h5>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans0.option1}}">
+                                <span>{{qus_ans0.option1}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans0.option2}}">
+                                <span>{{qus_ans0.option2}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans0.option3}}">
+                                <span>{{qus_ans0.option3}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans0.option4}}">
+                                <span>{{qus_ans0.option4}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- question 2 -->
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.</h3>
+                            <h5 class="mt-1 ml-2">{{qus_ans1.quesiton}}</h5>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans1.option1}}">
+                                <span>{{qus_ans1.option1}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans1.option2}}">
+                                <span>{{qus_ans1.option2}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans1.option3}}">
+                                <span>{{qus_ans1.option3}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans1.option4}}">
+                                <span>{{qus_ans1.option4}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- question 3 -->
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.</h3>
+                            <h5 class="mt-1 ml-2">{{qus_ans2.quesiton}}</h5>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans2.option1}}">
+                                <span>{{qus_ans2.option1}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans2.option2}}">
+                                <span>{{qus_ans2.option2}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans2.option3}}">
+                                <span>{{qus_ans2.option3}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans2.option4}}">
+                                <span>{{qus_ans2.option4}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- question 4 -->
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.</h3>
+                            <h5 class="mt-1 ml-2">{{qus_ans3.quesiton}}</h5>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans3.option1}}">
+                                <span>{{qus_ans3.option1}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans3.option2}}">
+                                <span>{{qus_ans3.option2}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans3.option3}}">
+                                <span>{{qus_ans3.option3}}</span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" name="quesiton" value="{{qus_ans3.option4}}">
+                                <span>{{qus_ans3.option4}}</span>
+                            </label>
+                        </div>
+                    </div>
+                        <!-- button -->
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary border-success align-items-center btn-success"
+                                type="submit">Submit<i class="fa fa-angle-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

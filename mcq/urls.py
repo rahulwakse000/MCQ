@@ -21,6 +21,7 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('learn.urls'))
+    # path('',include('learn.urls'))
+    path('',include('mcq_test.urls'))
 
 ]
