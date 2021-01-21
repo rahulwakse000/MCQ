@@ -18,4 +18,17 @@ class Questions(models.Model):
         return Questions.objects.all()
 
 
+class Login(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
 
+
+    def __str__(self):
+        return self.name
+
+    def register(self):
+        self.save()
+
+    @staticmethod
+    def get_all_login():
+        return Login.objects.all()
