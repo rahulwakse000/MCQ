@@ -43,7 +43,7 @@ def index(request):
 
     else:
         return render(request, 'index.html', {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3})
-
+    
 
 class Question_Answers(View):
     def get(self,**args):
