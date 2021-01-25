@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title></title>
+    <title>MCQ Test</title>
 </head>
 
 <body>
@@ -20,14 +20,20 @@
                 <h3 class="alert alert-light border mt-4 mb-4">Login Here</h3>
                 <form action="/" method="POST">{% csrf_token %}
 
-                    <!-- email -->
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{error}}
+                    </div>
+                    {% endif %}    
+
+                    <!-- name -->
                     <div class="form-group mb-3">
                         <label for="">Your Full Name</label>
                         <input  type="text" name="name" id="" value="" class="form-control"
                             placeholder="Full Name">
                     </div>
 
-                    <!-- password -->
+                    <!-- phone -->
                     <div class="form-group mb-3">
                         <label for="">Your Phone No.</label>
                         <input type="text" name="phone" id="" class="form-control" placeholder="1234567890">
