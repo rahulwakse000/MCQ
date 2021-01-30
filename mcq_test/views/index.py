@@ -15,9 +15,9 @@ def index(request):
 
     questions = Questions.get_all_questions()
     mark_user1 = User.get_all_user()
-    print(mark_user1)
-    mark_user1.reverse()
-    print(mark_user1)
+    # print(mark_user1)
+    # mark_user1.reverse()
+    # print(mark_user1)
     # m1 = mark_user1[0].mark
     user = mark_user1[0].name
     print(user)
@@ -76,7 +76,7 @@ def index(request):
         
 
 
-        return render(request, 'mark.html',{'mark':mark})
+        return render(request, 'mark.html',{'mark':mark,'user':user_name})
          
 
         

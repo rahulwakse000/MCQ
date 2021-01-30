@@ -7,4 +7,5 @@ from django.http import HttpResponse
 
 
 def mark(request):
+    user_name = request.session.get('name_id')
     return render(request, 'mark.html')
