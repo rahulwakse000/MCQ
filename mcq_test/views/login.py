@@ -34,7 +34,8 @@ class Login(View):
         error_message = self.validateUser(user)
 
         if not error_message:
-           
+            
+            user.register()
             return redirect('homepage')
         else:
             data = {
