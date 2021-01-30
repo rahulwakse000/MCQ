@@ -11,7 +11,7 @@ from django.views import View
 
 
 def index(request):
-    user_name = request.session.get('name_id')
+    
 
     questions = Questions.get_all_questions()
     mark_user1 = User.get_all_user()
@@ -26,7 +26,7 @@ def index(request):
     que1 = questions[1]
     que2 = questions[2]
     que3 = questions[3]
-    link = {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3,'user':user_name}
+    link = {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3}
 
     questions_list = [que0.answer, que1.answer, que2.answer, que3.answer]
 
@@ -44,7 +44,7 @@ def index(request):
     
     if request.method == 'GET':
         
-        print(user_name)
+        
         return render(request, 'index.html',link )
         
     else:
@@ -77,7 +77,7 @@ def index(request):
         
 
 
-        return render(request, 'mark.html',{'mark':mark_user,'user':user_name})
+        return redirect('mark')
          
 
         
