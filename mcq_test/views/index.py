@@ -20,13 +20,14 @@ def index(request):
     # print(mark_user1)
     # m1 = mark_user1[0].mark
     user = mark_user1.last()
+    user_name = user.name
     print(user)
     
     que0 = questions[0]
     que1 = questions[1]
     que2 = questions[2]
     que3 = questions[3]
-    link = {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3}
+    link = {'qus_ans0': que0, 'qus_ans1': que1, 'qus_ans2': que2, 'qus_ans3': que3,'user':user_name}
 
     questions_list = [que0.answer, que1.answer, que2.answer, que3.answer]
 
