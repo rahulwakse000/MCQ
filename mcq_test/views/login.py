@@ -10,6 +10,7 @@ from django.views import View
 class Login(View):
 
     def get(self, request):
+
         print(request.method)
         return render(request, 'login.html')
 
@@ -20,7 +21,6 @@ class Login(View):
 
         name = postData.get('name')
         phone = postData.get('phone')
-
         # validation
 
         value = {
@@ -34,7 +34,7 @@ class Login(View):
         error_message = self.validateUser(user)
 
         if not error_message:
-            
+            request.session['name_id'] = name
             user.register()
             return redirect('homepage')
         else:
