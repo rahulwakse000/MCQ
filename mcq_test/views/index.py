@@ -19,7 +19,7 @@ def index(request):
     # mark_user1.reverse()
     # print(mark_user1)
     # m1 = mark_user1[0].mark
-    user = mark_user1[0].name
+    user = mark_user1.last()
     print(user)
     
     que0 = questions[0]
@@ -37,7 +37,7 @@ def index(request):
     opt3 = postData.get('quesiton3')
     opt4 = postData.get('quesiton4')
     print(request.method)
-    mark_user = []
+    mark_user = 0
     # print(request.session(;))
     
     
@@ -50,24 +50,25 @@ def index(request):
     else:
         
         if questions_list[0] == opt1:
-            mark_user.append(5)
+            mark_user = mark_user + 5
         else:
             pass
         if questions_list[1] == opt2:
-            mark_user.append(5)
+            mark_user = mark_user + 5
         else:
             pass
         if questions_list[2] == opt3:
-            mark_user.append(5)
+            mark_user = mark_user + 5
         else:
             pass
         if questions_list[3] == opt4:
-            mark_user.append(5)
+            mark_user = mark_user + 5
         else:
             pass
-        mark = sum(mark_user)
-        print(mark)
-        m1 = User(mark=mark)
+        # mark = sum(mark_user)
+        print(mark_user)
+        user.mark = mark_user
+        user.save()
 
         # m1.register()
         
@@ -76,7 +77,7 @@ def index(request):
         
 
 
-        return render(request, 'mark.html',{'mark':mark,'user':user_name})
+        return render(request, 'mark.html',{'mark':mark_user,'user':user_name})
          
 
         
